@@ -1,0 +1,563 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+          border: 5px solid rgb(94, 28, 73);
+          background-image:  linear-gradient(to bottom right,#e9bcca,white,#cad5f3);
+      height: 50px;
+      width: 99%;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .header a{
+      color: black;
+      text-decoration: none;
+      position: relative;
+     transition: color 0.3s ease, padding-bottom 0.3s ease
+    }
+    
+.header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #131313;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header a:hover {
+  color: #101111;
+}
+
+.header a:hover::after {
+  width: 100%;
+  left: 0;
+}
+    .a{
+      margin: 13px;
+      font-weight: bolder;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+    .background{
+      height: 70vh;
+      width: 100%;
+      background-color: #300925;
+      border-radius: 30px 30px 0px 0px;
+      margin: auto;
+    }
+    .gradient1{
+      float: left;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      color: rgb(146, 8, 82);
+      background-image: linear-gradient(to bottom right,#e9bcca,white,#cad5f3);
+      height: 60vh;
+      width: 55%;
+      margin-top: 20px;
+      margin-left: 10px;
+      border: 5px dotted rgb(138, 116, 197);
+      border-radius: 30px;
+    }
+    .slogan{
+      color: rgb(103, 5, 130);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .about{
+      border-radius: 10px;
+      margin: 9px;
+      box-shadow: 0 2px 5px 0 pink,0 6px 20px 0 rgba(233, 157, 210, 0.897);
+      color:rgb(103, 5, 130);
+      font-family: Copperplate, Papyrus, fantasy;
+    }
+    .bgimage{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 59vh;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 40%;
+      border: 5px dotted rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .image{
+      border-radius: 30px;
+      background-image: url("./culture.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .slogan1{
+      width: 100%;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      box-shadow:  0 3px 10px 0 pink,0 3px 10px 0 rgba(233, 157, 210, 0.897);
+      text-shadow:  2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: x-large;
+      text-align: center;
+      color: black;
+    }
+    .background1{
+      color: white;
+      background-color: #300925;
+      height: 840px;
+      width: 99%;
+      margin: auto;
+      border: 5px outset rgb(247, 6, 171);
+    }
+    .fest{
+      width: 300px;
+      float: left;
+    }
+    .lang{
+      margin-top: 20px;
+      width: 300px;
+      float: right;
+    }
+    .attire{
+      margin-left: 50px;
+      width: 300px;
+      float: left;
+    }
+    .bgimage1{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: left;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-top: 260px;
+      margin-left: 10px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: absolute;
+    }
+    .card1{
+      color: white;
+      background-image: url("./festival.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title1{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .bgimage1:hover .card1{
+      transform: rotateY('180deg');
+    }
+    .bgimage2{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-top: 70px;
+      margin-right: 10px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: relative;
+    }
+    .card2{
+      color: white;
+      background-image: url("./language.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title2{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 99%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .bgimage3{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-top: 10px;
+      margin-right: 50px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: relative;
+    }
+    .card3{
+      color: white;
+      background-image: url("./saree.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title3{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 99%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .background2{
+      font-size: larger;
+      font-family: monospace;
+      padding: 5px;
+      position: relative;
+      text-align: center;
+      color: white;
+      float: left;
+      height: 16vh;
+      width: 99.2%;
+      background-color: #300925;
+      border-radius: 0px 0px 30px 30px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+    }
+    .footer{
+        float: left;
+        margin-top: 10px;
+        background-image: linear-gradient(to bottom right,#e9bcca,white,#cad5f3);
+        height: 110px;
+        width: 99%;
+        border: 5px solid rgb(94, 28, 73);
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+
+  .header {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 2px inset rgb(247, 6, 171);
+  }
+
+ 
+  .a {
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+
+  .background {
+    height: 157vh;
+    width: 100%;
+    padding-top: 3px;
+    border-radius: 20px;
+  }
+
+ 
+  .gradient1 {
+    float: none;
+    width: 91%;
+    height: 55vh;
+    margin-top: 15px;
+    margin-left: 32px;
+    margin-right: 0;
+    border: 3px dotted rgb(138, 116, 197);
+    border-radius: 20px;
+  }
+
+ 
+  .bgimage {
+    width: 90%;
+    height: 54%;
+    margin-top: 20px;
+    margin-right: 34px;
+    margin-left: 0%;
+    border: 3px dotted rgb(138, 116, 197);
+    border-radius: 20px;
+  }
+
+
+  .slogan1 {
+    font-size: large;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgb(183, 141, 223);
+  }
+
+
+  .background1 {
+    height: 155vh;
+    padding-bottom: 20px;
+    width: 98%;
+  }
+
+
+  .bgimage1 {
+    width: 27%;
+    height: 84vh;
+    margin-left: 10px;
+    margin-top: 45%;
+    float: left;
+    position: absolute;
+  }
+
+ .bgimage3{
+    width: 29%;
+    height: 84vh;
+    margin-right: 30px;
+    float: right;
+    position: relative;
+  }
+
+  .bgimage2{
+    width: 29%;
+    height: 84vh;
+    margin-right: 11px;
+    margin-top: 20%;
+    float: right;
+    position: relative;
+  }
+
+  
+  .card1, .card2, .card3 {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  
+  .title1, .title2, .title3 {
+    font-size: 14px;
+    margin-top: 60%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+
+  .footer {
+    height: 80px;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  
+  .fest, .lang, .attire {
+    width: 31%;
+    margin: 10px 0;
+  }
+
+
+  .background2 {
+    font-size: medium;
+    padding: 5px;
+    text-align: center;
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ 
+  
+  .header {
+    height: 35px;
+    padding: 5px;
+  }
+
+  .a {
+    font-size: 12px;
+  }
+
+  .gradient1 {
+    height: 45vh;
+  }
+
+  .slogan1 {
+    font-size: medium;
+  }
+
+  .footer {
+    height: 70px;
+  }
+
+
+  .bgimage1, .bgimage2, .bgimage3 {
+    width: 100%;
+  }
+
+  .bgimage, .bgimage1, .bgimage2, .bgimage3 {
+    margin: 10px auto;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <div class="main">
+
+    <div class="header">
+      <div class="a">
+        <a href="homepagecss.html"> ~Home page || </a>
+        <a href="culturecss.html">Culture page || </a>
+        <a href="landmarkcss.html">Landmarks page ||  </a>
+        <a href="cuisinecss.html">Cuisine page ||  </a>
+        <a href="contactcss.html">Contact Us~</a>  
+      </div>
+    </div>
+
+  <div class="background">
+    <div class="gradient1">
+      <h1 style="text-shadow: 2px 2px 2px rgb(227, 126, 254),2px 2px 2px rgb(183, 141, 223);"><u>WELCOME TO CULTURAL INDIA !</u></h1>
+      <div class="slogan"><h3><b>Discover the diversity,beuty and rich heritage of india!</b></h3></div>
+      <div class="about"><h2><b>About culture of India</b></h2>
+        <p><strong>The beauty of Indian culture lies in its history, and is reflected in its arts, traditions, and spirituality. The arts, including music, dance, and visual arts, play a central role in Indian culture. India is well known for its 'Unity in Diversity' across the world.</strong></p></div>
+    </div>
+    <div class="bgimage">
+      <div class="image"></div>
+    </div>
+  </div>
+
+  <div class="slogan1">
+    <q>Discover the rich and diverse culture of India,a land of unity in diversity.</q>
+  </div>
+
+<div class="background1">
+
+  <div class="fest"><ul type="default">
+    <li><strong><mark>Diwali:</mark></strong>Festival of lights,symbolizing the victory of light over darkness.</li><br>
+    <li><strong>Holi:</strong>Festival of colors celebrating love and arrival of spring.</li><br>
+    <li><strong>Eid:</strong>Festival of Harmonny. marked by prayers,feasts and charity.</li><br>
+    <li><strong>Christmas:</strong>Festival of joy.celebrating the birth of jesus christ.</li><br>
+</ul>
+</div>
+
+<div class="lang"><h4>Popular Language in india</h4>
+    <table border="1" cellspacing="0" style="color: white;">
+        <tr>
+            <th>Language</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>Hindi</td>
+            <td>North India</td>
+        </tr>
+        <tr>
+            <td>Bengali</td>
+            <td>West Bengal</td>
+        </tr>
+        <tr>
+            <td>Tamil</td>
+            <td>Tamilnadu</td>
+        </tr>
+        <tr>
+            <td>Telugu</td>
+            <td>Andhra Pradesh</td>
+        </tr>
+    </table>
+  </div>
+
+   <div class="attire"><ul type="default">
+      <li><strong>Saree:</strong>Elegant drape worn by women across India.</li><br>
+      <li><strong>Kurta-Pajama:</strong>Confertable attire for men.popular in the north.</li><br>
+      <li><strong>Lehnga:</strong>A festive outfit of women.especially in weddings.</li><br>
+      <li><strong>Dhoti:</strong>Traditional men's wear in southern and easten India.</li><br>
+  </ul>
+</div> 
+
+  <div class="bgimage1">
+  <div class="card1">
+    <div class="front1">
+      <div class="title1"><h2>FESTIVALS</h2><br>
+        Diwali, also known as the Festival of Lights, is a major Hindu festival that celebrates the triumph of good over evil. It is celebrated by lighting lamps, bursting crackers, and decorating homes with diyas and rangolis.</div>
+    </div>
+  </div>
+</div>
+
+<div class="bgimage2">
+  <div class="card2">
+    <div class="front2">
+      <div class="title2"><h2>LANGUAGES</h2><br>
+        India is one of the most linguistically diverse countries in the world, with hundreds of languages and dialects spoken across the country.</div>
+    </div>
+  </div>
+</div>
+
+<div class="bgimage3">
+  <div class="card3">
+    <div class="front3">
+      <div class="title3"><h2>Traditional Attire</h2><br>
+        indian traditional clothing varies by region.Showcasting its culture diversity.The traditional dress for women is the Saree with a blouse and petticoat. Men wear the Dhoti and Kurta, a long tunic worn over the Dhoti.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="background2">
+  <marquee direction="left" loop=""><div class="thankyou">THANK YOU !<br><br></div><div class="by"></marquee><marquee direction="right" loop="">~BY Dhaval Siddhapura</marquee>
+</div>
+
+    <div class="footer"><b><a href="homepagecss.html">&larr;Back to Home</a>
+      <p>Contact us at  <a href="http://www.incredibleindia.gov.in">info@incredibleindia.com</a></p>
+      <p>&#169 2025 Incredible India Project.All rights reserved.</p></b>
+    </div>
+  </div>
+</div>
+</body>
+</html>

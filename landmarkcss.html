@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .header{
+        background-image: linear-gradient(to bottom right, #B1F0F7, #81BFDA, #F5F0CD, #FADA7A);
+    border: 5px solid black;
+      height: 50px;
+      width: 99%;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .header a{
+      color: black;
+      text-decoration: none;
+      position: relative;
+     transition: color 0.3s ease, padding-bottom 0.3s ease
+    }
+    
+.header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #131313;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header a:hover {
+  color: #101111;
+}
+
+.header a:hover::after {
+  width: 100%;
+  left: 0;
+}
+    .a {
+      margin: 13px;
+      font-weight: bolder;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+
+    .background {
+      height: 70vh;
+      width: 100%;
+      background-color: black;
+      border-radius: 30px 30px 0px 0px;
+      margin: auto;
+      text-shadow: 2px 2px 2px rgb(126, 219, 235), 2px 2px 2px rgb(183, 141, 223);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+    }
+
+    .gradient1 {
+      float: left;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      color: rgb(18, 10, 83);
+      background-image: linear-gradient(to bottom right, #B1F0F7, #81BFDA, #F5F0CD, #FADA7A);
+      height: 60vh;
+      width: 52%;
+      margin-top: 20px;
+      margin-left: 10px;
+      border: 5px double rgb(2, 34, 19);
+      border-radius: 30px;
+    }
+
+    .slogan {
+      color: rgb(26, 55, 66);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .about {
+      border-radius: 10px;
+      margin: 9px;
+      box-shadow: 0 2px 5px 0 rgb(5, 91, 27), 0 6px 20px 0 rgba(175, 173, 78, 0.897);
+      color: rgb(7, 62, 71);
+      font-family: Copperplate, Papyrus, fantasy;
+    }
+
+    .bgimage {
+      box-shadow: 1px 1px 1px white, 5px 5px 5px rgb(126, 254, 179);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 59vh;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 43%;
+      border: 5px double rgb(2, 34, 19);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .image {
+      border-radius: 30px;
+      background-image: url("./landmark.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+
+    .background3 {
+      width: 100%;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      box-shadow: 0 6px 15px 0 rgba(4, 11, 105, 0.897);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: x-large;
+      text-align: center;
+      color: black;
+    }
+
+    .background1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 20px;
+      float: left;
+      height: 160vh;
+      width: 100%;
+      background-color: black;
+    }
+
+    .bgimage1 {
+      box-shadow: 1px 1px 1px white, 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 80vh;
+      margin-top: 25px;
+      margin-left: 40px;
+      width: 90%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .landmark {
+      border-radius: 30px;
+      background-image: url("./redfort.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+
+    .background4 {
+      padding-left: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 20px;
+      float: left;
+      height: 165vh;
+      width: 100%;
+      background-color: black;
+      color: white;
+    }
+
+    .bgimage2 {
+      box-shadow: 1px 1px 1px white, 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 80vh;
+      margin-top: 25px;
+      margin-left: 150px;
+      width: 60%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .dallake {
+      border-radius: 30px;
+      background-image: url("./dallake.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+
+    .background2 {
+      font-size: larger;
+      font-family: monospace;
+      padding: 5px;
+      position: relative;
+      text-align: center;
+      color: white;
+      float: left;
+      height: 16vh;
+      width: 99.2%;
+      background-color: black;
+      border-radius: 0px 0px 30px 30px;
+      margin-top: 10px;
+    }
+
+    td:hover {
+      background-image: linear-gradient(to bottom right, #B1F0F7, #81BFDA, #F5F0CD, #FADA7A);
+      color: black;
+    }
+
+    th:hover {
+      background-image: linear-gradient(to bottom right, #B1F0F7, #81BFDA, #F5F0CD, #FADA7A);
+      color: black;
+    }
+
+    .footer {
+      float: left;
+      margin-top: 10px;
+      background-image: linear-gradient(to bottom right, #B1F0F7, #81BFDA, #F5F0CD, #FADA7A);
+      height: 110px;
+      width: 99%;
+      border: 5px solid black;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .header {
+        height: 35px;
+        padding: 32px;
+        width: 91%;
+        border: 3px solid black;
+        margin-bottom: 10px;
+      }
+
+      .a {
+        font-size: 14px;
+        text-align: left;
+        margin: 8px;
+      }
+
+      .background {
+        height: 120vh;
+        width: 101%;
+        padding-top: 1px;
+        text-shadow: 1px 1px 1px rgb(126, 219, 235), 1px 1px 1px rgb(183, 141, 223);
+      }
+
+      .gradient1 {
+        float: none;
+        width: 96%;
+        height: auto;
+        margin-top: 0px;
+        border: none;
+      }
+
+      .slogan {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .about {
+        font-size: 14px;
+      }
+
+      .bgimage {
+        float: none;
+        width: 96%;
+        margin-left: 4px;
+        height: 62vh;
+      }
+
+      .image {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .background1 {
+        height: auto;
+        width: 100%;
+        background-color: black;
+      }
+
+      .bgimage1 {
+        width: 94%;
+        margin: 10px;
+        height: 54vh;
+      }
+
+      .landmark {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .aboutlandmark {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .background4 {
+        font-size: 16px;
+        height: auto;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+      }
+
+      .table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .table th, .table td {
+        padding: 8px;
+        text-align: center;
+      }
+
+      .bgimage2 {
+        width: 66%;
+        height: 60vh;
+        margin-bottom: 42px;
+        margin-top: 10px;
+      }
+
+      .dallake {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .footer {
+        height: auto;
+        width: 96%;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .footer a {
+        font-size: 14px;
+      }
+
+      marquee {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="a">
+      <a href="homepagecss.html"> ~Home page || </a>
+      <a href="culturecss.html">Culture page || </a>
+      <a href="landmarkcss.html">Landmarks page ||  </a>
+      <a href="cuisinecss.html ">Cuisine page ||  </a>
+      <a href="contactcss.html">Contact Us~</a>  
+    </div>
+  </div>
+
+  <div class="background">
+    <div class="gradient1">
+      <h1 style="text-shadow: 2px 2px 2px rgb(126, 254, 179),2px 2px 2px rgb(183, 141, 223);"><u>WELCOME TO LANDMARK OF INDIA !</u></h1>
+      <div class="slogan"><h4><b>Explore the iconic landmarks that define the heritage and history of India.</b></h4></div>
+      <div class="about"><h2><b>About Landmarks of India</b></h2>
+        <p><strong>India is also famous for its beautiful artistic and architectural heritage. Iconic monuments such as the Taj Mahal, the Hindu temples of Varanasi, the stone temples of Khajuraho, and the ancient city of Hampi are all testament to the beauty and craftsmanship of Indian architecture.</strong></p></div>
+    </div>
+    <div class="bgimage">
+      <div class="image"></div>
+    </div>
+  </div>
+
+  <div class="background3">
+    <q><b>India is home of the some awe-inspiring landmarks in the world. These monuments reflect its rich cultural heritage and historical significance.</b></q>
+  </div>
+
+  <div class="background1">
+    <div class="aboutlandmark" style=" color: white; font-size: 20px; text-align: center;"><u><h1>Famous Landmarks in India</h1><h2>Iconic Monuments</h2></u></div>
+    <div class="bgimage1">
+      <div class="landmark"></div>
+    </div>
+    <div class="aboutlandmark" style="color: white; font-size: 19px;; margin-top: 20px;">
+      <blockquote><p style="text-align: center;">The majestic Red Fort in Delhi</p></blockquote>
+      <ul type="default">
+        <li><strong>Taj Mahal : </strong>Located in Agra.This symbol of eternal love as one of the <mark>seven wonders of the world.</mark></li><br>
+        <li><strong>Red Fort : </strong>A UNESCO World heritage site in Delhi.showcasing Mughal architecture</li><br>
+        <li><strong>Hawa Mahal : </strong>Known as the "palace of winds,"this Jaipur marvel is famous for its intricate latticework.</li><br>
+        <li><strong>Charminar : </strong>An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic architecture.</li><br>
+    </ul>
+    </div>
+  </div>
+
+  <div class="background4">
+    <h2 style="text-align: center;">Indian States and Capitals</h2>
+    <p>India is a union of states, each with its unique cultural and geographical identity. Here's a detailed table listing some Indian states, their capitals, and key data:</p>
+    <caption>List of Indian States</caption><br>
+    <div class="table"><table border="1" cellspacing="0" width="98%">
+        <tr>
+            <th rowspan="2">State</th>
+            <th rowspan="2">Capital</th>
+            <th colspan="2">Area(In km)</th>
+            <th rowspan="2">Official Language</th>
+        </tr>
+        <tr>
+            <th>Urban</th>
+            <th>Rural</th>
+        </tr>
+        <tr>
+            <td>Gujarat</td>
+            <td>Gandhinagar</td>
+            <td>1,764</td>
+            <td>185,933</td>
+            <td>Gujarati</td>
+        </tr>
+        <tr>
+            <td>Maharashtra</td>
+            <td>Marathi</td>
+            <td>307,713</td>
+            <td>70,940</td>
+            <td>Marathi</td>
+        </tr>
+        <tr>
+            <td>Rajasthan</td>
+            <td>Jaipur</td>
+            <td>342,713</td>
+            <td>NA</td>
+            <td>Hindi</td>
+        </tr>
+        <tr>
+            <td colspan="10">Note: Data is indicative and may not represent official value.</td>
+        </tr>
+    </table>
+  </div>
+    <h2>Fun Fact : ~</h2>
+    <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices, including one located on a floating structure in Dal lake, Srinagar.</p>
+  <div class="bgimage2">
+    <div class="dallake"></div>
+    <blockquote><p style="text-align: center; color: white;">The floating post office in Dal Lake, Srinagar</p></blockquote>
+  </div>
+  </div>
+
+  <div class="background2">
+    <marquee direction="left" loop=""><div class="thankyou">THANK YOU !<br><br></div><div class="by"></marquee><marquee direction="right" loop="">~BY Dhaval Siddhapura</marquee>
+  </div>
+
+  <div class="footer"><b><b><a href="homepagecss.html">&larr;Back to Home</a>
+    <p>Contact us at  <a href="http://www.incredibleindia.gov.in">info@incredibleindia.com</a></p>
+    <p>&#169 2025 Incredible India Project.All rights reserved.</p></b></b>
+  </div>
+
+</body>
+</html>

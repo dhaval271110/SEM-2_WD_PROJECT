@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .header{
+      background-image:  linear-gradient(to bottom right,#F4F576,white,#80FDBB);
+      height: 50px;
+      width: 99%;
+      border: 5px solid rgb(2, 34, 19);
+      margin-bottom: 10px;
+    }
+    .a{
+      margin: 13px;
+      font-weight: bolder;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+    .background{
+      height: 70vh;
+      width: 100%;
+      background-color: #14281D;
+      border-radius: 30px 30px 0px 0px;
+      margin: auto;
+    }
+    .gradient1{
+      float: left;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      color: #14281D;
+      background-image: linear-gradient(to bottom right,#F4F576,white,#80FDBB);
+      height: 60vh;
+      width: 52%;
+      margin-top: 20px;
+      margin-left: 10px;
+      border: 5px dashed rgb(2, 34, 19);
+      border-radius: 30px;
+    }
+    .slogan{
+      color: rgb(4, 118, 93);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .about{
+      border-radius: 10px;
+      margin: 9px;
+      box-shadow: 0 2px 5px 0 rgb(5, 91, 27),0 6px 20px 0 rgba(175, 173, 78, 0.897);
+      color:rgb(8, 77, 62);
+      font-family: Copperplate, Papyrus, fantasy;
+    }
+    .bgimage{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(126, 254, 179);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 59vh;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 43%;
+      border: 5px dashed rgb(2, 34, 19);
+      border-radius: 30px;
+    }
+    .image{
+      border-radius: 30px;
+      background-image: url("./cuisine.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .audio{
+        padding-top: 10px;
+      height: 70px;
+      width: 100%;
+      margin-right: 18px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      box-shadow: 5px 5px 10px 0  rgb(4, 87, 39);
+      text-align: center;
+      border: 2px solid rgb(4, 87, 39);
+    }
+  
+    .background1{
+      color: white;
+      background-color: #14281D;
+      height: 940px;
+      width: 99%;
+      margin: auto;
+      border: 5px outset rgb(10, 95, 74);
+    }
+    .NI{
+      margin-left: 15px;
+      width: 300px;
+      float: left;
+    }
+    .SI{
+      width: 300px;
+      float: right;
+    }
+    .sweet{
+      margin-left: 50px;
+      width: 300px;
+      float: left;
+    }
+    .bgimage1{
+      box-shadow: 1px 1px 1px white,5px 5px 5px rgb(240, 255, 230);
+      float: left;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-top: 358px;
+      margin-left: 10px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: absolute;
+    }
+    .card1{
+      color: white;
+      background-image: url("./NI.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title1{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .bgimage2{
+      box-shadow: 1px 1px 1px white,5px 5px 5px rgb(240, 255, 230);
+      float: left;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-left: 360px;
+      margin-right: 10px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: relative;
+    }
+    .card2{
+      color: white;
+      background-image: url("./sweet.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title2{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 99%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .bgimage3{
+      box-shadow:1px 1px 1px white,5px 5px 5px rgb(240, 255, 230);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 530px;
+      margin-right: 20px;
+      width: 300px;
+      border: 5px double rgb(138, 116, 197);
+      position: relative;
+    }
+    .card3{
+      color: white;
+      background-image: url("./SI.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .title3{
+      margin-top: 70%;
+      text-align: center;
+      height: 200px;
+      width: 99%;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.8px);
+      -webkit-backdrop-filter: blur(3.8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .background2{
+      font-size: larger;
+      font-family: monospace;
+      padding: 5px;
+      position: relative;
+      text-align: center;
+      color: white;
+      float: left;
+      height: 16vh;
+      width: 99.2%;
+      background-color: #14281D;
+      border-radius: 0px 0px 30px 30px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+    }
+    .footer{
+        float: left;
+        margin-top: 10px;
+        background-image: linear-gradient(to bottom right,#F4F576,white,#80FDBB);
+        height: 110px;
+        width: 99%;
+        border: 5px solid rgb(2, 34, 19);
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+   
+    .header {
+        height: 40px; 
+    }
+
+    .a {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .background {
+    height: 157vh;
+    width: 100%;
+    padding-top: 3px;
+    border-radius: 20px;
+  }
+
+ 
+  .gradient1 {
+    float: none;
+    width: 91%;
+    height: 55vh;
+    margin-top: 15px;
+    margin-left: 32px;
+    margin-right: 0;
+    border: 3px dotted rgb(138, 116, 197);
+    border-radius: 20px;
+  }
+
+ 
+  .bgimage {
+    width: 90%;
+    height: 54%;
+    margin-top: 20px;
+    margin-right: 34px;
+    margin-left: 0%;
+    border: 3px dotted rgb(138, 116, 197);
+    border-radius: 20px;
+  }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .about {
+        font-size: 14px;
+        box-shadow: 0 2px 5px 0 rgb(5, 91, 27), 0 6px 20px 0 rgba(175, 173, 78, 0.897);
+    }
+
+
+    .audio {
+        height: auto; 
+        padding: 15px 10px;
+        width: 97%;
+    }
+    .background1 {
+    height: 181vh;
+    padding-bottom: 20px;
+    width: 98%;
+  }
+
+
+  .bgimage1 {
+    width: 29%;
+    height: 84vh;
+    margin-left: 10px;
+    margin-top: 60%;
+    float: left;
+    position: absolute;
+  }
+
+ .bgimage3{
+    width: 29%;
+    height: 84vh;
+    margin-right: 9px;
+    float: right;
+    position: relative;
+  }
+
+  .bgimage2{
+    width: 29%;
+    height: 84vh;
+    margin-left: 36%;
+    margin-top: 0%;
+    float: left;
+    position: relative;
+  }
+
+  
+  .card1, .card2, .card3 {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  
+  .title1, .title2, .title3 {
+    font-size: 14px;
+    margin-top: 60%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+
+  .footer {
+    height: 80px;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  
+  .NI,.SI,.sweet {
+    width: 31%;
+    margin-left: 5px;
+  }
+
+
+  .background2 {
+    font-size: medium;
+    padding: 5px;
+    text-align: center;
+    height: 20vh;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <div class="a">
+        <a href="http://127.0.0.1:5500/WD_project.html/homepagecss.html" style="color: black; text-decoration: none;"> ~Home page || </a>
+        <a href="http://127.0.0.1:5500/WD_project.html/culturecss.html" style="color: black; text-decoration: none;" >Culture page || </a>
+        <a href="http://127.0.0.1:5500/WD_project.html/landmarkcss.html"  style="color: black; text-decoration: none;"  >Landmarks page ||  </a>
+        <a href="http://127.0.0.1:5500/WD_project.html/cuisinecss.html " style="color: black; text-decoration: none;">Cuisine page ||  </a>
+        <a href="http://127.0.0.1:5500/WD_project.html/contactcss.html" style="color: black; text-decoration: none;">Contact Us~</a>  
+      </div>
+    </div>
+
+    <div class="background">
+      <div class="gradient1">
+        <h1 style="text-shadow: 2px 2px 2px rgb(126, 254, 179),2px 2px 2px rgb(183, 141, 223);"><u>WELCOME TO CUISINE OF INDIA !</u></h1>
+        <div class="slogan"><h4><b>Explore the flavors of the India through its diverse and rich culinary traditions!</b></h4></div>
+        <div class="about"><h2><b>About cuisine of India</b></h2>
+          <p><strong>Many types of Indian cuisine are made either from fish, meat, lentils, or vegetables. The specialty of Indian cuisine is its variety of spices that make each dish exotic, delicious, and stand out from the rest of the cuisines in the world.</strong></p></div>
+      </div>
+      <div class="bgimage">
+        <div class="image"></div>
+      </div>
+    </div>
+
+    <div class="audio">
+      <audio controls><source src="./titanium (1).mp3" type="audio/ogg">
+    </div>
+
+    <div class="background1">
+
+      <div class="NI"><h2>North indian Cuisine</h2>
+        <p>North india is known for its rich,aromatic,and flavorful dishes often cooked with ghee and spices:</p>
+        <ul type="default">
+            <li><strong>Biryani:</strong>A fragrant rice dish made with aomatic spices and meat or vegetables.</li><br>
+                <li><strong>Butter Chicken:</strong>A creamy,tomato-based curry that's fevorite world wide.</li><br>
+                <li><strong>Paneer Tikka:</strong>Marinated paneer cubes grilled to perfection.</li><br>
+        </ul>
+    </div>
+    
+    <div class="SI">
+      <h2>South Indian Cuisine</h2>
+    <p>South india offers widw array of dishes with a perfect blend of spices and tangy flavors.</p>
+    <ul type="default">
+        <li><strong>Masala Dosa:</strong>A crispy rice crepe  stuffed with .</li><br>
+        <li><strong>Masala Dosa:</strong>A crispy rice crepe  stuffed with spice potato filling.</li><br>
+            <li><strong>Idli and Sambhar:Soft rice cakes served with a tangy lentil-based.</strong></li><br>
+            <li><strong>Chettinad chicken:</strong>A fiery,flavorful chicken dish from Tamil Nadu.</li><br>
+    </ul>
+      </div>
+    
+       <div class="sweet"><h2>Sweet Delights</h2>
+        <p>No Indian meal is complete without including in some mouth-watering desserts:
+        </p>
+        <ul type="default">
+            <li><strong>Gulab Jamun:</strong>Fried milk solids soaked in sugar syrup.</li><br>
+            <li><strong>Rasgulla:</strong>Soft and spongy cheese balls in light sugar syrup.</li><br>
+                <li><strong>Payasam:A south Indian dessert made of milk,rice and jaggery.</strong></li><br>
+                <li><strong>Chettinad chicken:</strong>A fiery,flavorful chicken dish from Tamil Nadu.</li><br>
+        </ul>
+    </div> 
+    
+      <div class="bgimage1">
+      <div class="card1">
+        <div class="front1">
+          <div class="title1"><h2>NORTH INDIAN CUISINE</h2><br>
+            The culinary dishes made in North Indian households, such as Gobhi Aloo, Paneer Makhni, Dum Aloo, Dal Makhni, Rajma, Dal Fry, etc., are enjoyed with the staple Naan breads and Paranthas. The North Indian Thali can be found in any tourist spot in North India.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bgimage2">
+      <div class="card2">
+        <div class="front2">
+          <div class="title2"><h2>SWEET DELIGHTS</h2><br>
+            "Sweet delights" in Indian cuisine refers to a wide variety of traditional desserts, often called "mithai," that vary significantly by region, with popular options like gulab jamun, jalebi, rasgulla, Mysore pak, and kheer.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bgimage3">
+      <div class="card3">
+        <div class="front3">
+          <div class="title3"><h2>SOUTH INDIAN CUISINE</h2><br>
+            When it comes to healthy eating, South Indian cuisine is often considered as one of the best options in the country. With its emphasis on fermented foods, whole grains, and nutrient-dense ingredients.</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+    <div class="background2">
+      <marquee direction="left" loop=""><div class="thankyou">THANK YOU !<br><br></div><div class="by"></marquee><marquee direction="right" loop="">~BY Dhaval Siddhapura</marquee>
+    </div>
+
+    <div class="footer"><b><b><a href="homepage.html">&larr;Back to Home</a>
+      <p>Contact us at  <a href="http://www.incredibleindia.gov.in">info@incredibleindia.com</a></p>
+      <p>&#169 2025 Incredible India Project.All rights reserved.</p></b></b>
+    </div>
+</body>
+</html>

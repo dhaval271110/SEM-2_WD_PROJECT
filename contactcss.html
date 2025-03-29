@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main{
+            height: 156vh;
+            width: 100%;
+        }
+        .header{
+            height: 50px;
+            width: 98%;
+            background-color: black;
+            padding-top: 0.7%;
+            padding-left: 12%;
+            margin-top: 1%;
+            margin-left: 1%;
+            border-radius: 35px;
+            border: 2px solid white;
+        }
+        .header a{
+            color: white;
+            text-decoration: none;
+        }
+        .a1{
+            float: left;
+            height: 30px;
+            width: 80px;
+            border: 1px solid white;
+            margin-right: 8%;
+            padding-top: 0.4%;
+            padding-left: 2%;
+            border-radius: 15px;
+        }
+        .a2{
+            float: left;
+            height: 30px;
+            width: 100px;
+            border: 1px solid white;
+            margin-right: 8%;
+            padding-top: 0.4%;
+            padding-left: 2%;
+            border-radius: 15px;
+        }
+        .a3{
+            float: left;
+            height: 30px;
+            width: 100px;
+            border: 1px solid white;
+            margin-right: 8%;
+            padding-top: 0.4%;
+            padding-left: 1.2%;
+            border-radius: 15px;
+        }
+        .a4{
+            float: left;
+            height: 30px;
+            width: 100px;
+            border: 1px solid white;
+            margin-right: 8%;
+            padding-top: 0.4%;
+            padding-left: 2%;
+            border-radius: 15px;
+        }
+        .a5{
+            float: left;
+            height: 30px;
+            width: 100px;
+            border: 1px solid white;
+            margin-right: 8%;
+            padding-top: 0.4%;
+            padding-left: 2%;
+            border-radius: 15px;
+        }
+        .a1:hover{
+            background-color: rgba(13, 192, 241, 0.634);
+            color: black;
+        }
+        .a2:hover{
+            background-color: rgba(13, 192, 241, 0.634);
+            color: black;
+        }
+        .a3:hover{
+            background-color: rgba(13, 192, 241, 0.634);
+            color: black;
+        }
+        .a4:hover{
+            background-color: rgba(13, 192, 241, 0.634);
+            color: black;
+        }
+        .a5:hover{
+            background-color: rgba(13, 192, 241, 0.634);
+            color: black;
+        }
+        .form{
+            padding-left: 10px;
+            color: white;
+            text-align: left;
+            border-radius: 30px 0px 30px 0px;
+            float: left;
+            height: 116vh;
+            width: 50%;
+            background-color: black;
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+        .ojas{
+            border-radius: 0px 30px 0px 0px;
+            float: right;
+            height: 86vh;
+            width: 47.5%;
+            background-color: black;
+            margin-top: 1%;
+            margin-right: 1%;
+            color: white;
+            text-align: center;
+        }
+        .thanks{
+            border-radius: 0px 0px 0px 30px;
+            float: right;
+            height: 29vh;
+            width: 47.5%;
+            background-color: black;
+            margin-top: 0.5%;
+            margin-right: 1%;
+            font-size: larger;
+            padding-top: 30px;
+            position: relative;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .footer{
+            float: left;
+            height: 120px;
+            width: 98%;
+            background-color: black;
+            padding-top: 1%;
+            margin-left: 1%;
+            margin-top: 1%;
+            border-radius: 40px;
+            border: 2px solid white;
+            color: white;
+            text-align: center;
+        }
+
+@media (max-width: 768px) {
+    .main {
+        height: auto;
+    }
+
+   
+    .header {
+        height: 56px;
+        width: 99%;
+        padding-top: 10px;
+        padding-left: 2%;
+        margin-top: 10px;
+        margin-left: 4px;
+        border-radius: 25px;
+    }
+
+    
+    .a1, .a2, .a3, .a4, .a5 {
+        width: 19%;
+        margin-right: 6px;
+        margin-bottom: 10px;
+        padding-left: 5%;
+    }
+
+    
+    .form{
+        width: 98%;
+        height: auto;
+        padding: 20px;
+        border-radius: 30px 30px 0 0;
+    }
+    .ojas{
+        width: 98%;
+        height: auto;
+        padding: 20px;
+        border-radius: 0 0 0 0;
+    }
+    .thanks{
+        width: 98%;
+        height: auto;
+        padding: 20px;
+        border-radius: 0 0 30px 30px;
+    } 
+
+    .footer {
+        height: 119px;
+        width: 100%;
+        padding-top: 10px;
+        margin-left: 0;
+        margin-top: 10px;
+        border-radius: 25px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="a">
+                <div class="a1"><a href="homepagecss.html">Home</a></div>
+                <div class="a2"><a href="culturecss.html">Culture</a></div>
+                <div class="a3"><a href="landmarkcss.html">Landmark</a></div>
+                <div class="a4"><a href="cuisinecss.html">Cuisine</a></div>
+                <div class="a5"><a href="contactcss.html">Contact</a></div>
+            </div>
+        </div>
+
+        <div class="form">
+           <br><h2 style="text-align: center;"><u>CONTACT US</u></h2><br>
+           <p>Please fill out the form below for any enqiuries or to register as a student.</p><br>
+           <h2>~><u>Student</u> <u>Registration</u> <u>Form</u></h2>
+           <table><br>
+            <label>
+                Full Name :  <input type="text" placeholder="Enter Your Name">
+            </label><br><br>
+            <label>
+                Password:  <input type="password">
+            </label><br><br>
+            <label>
+                Gender : <input type="radio" name="gender" value="male">  male
+                <input type="radio" name="gender" value="female">  female
+            </label><br><br>
+            <label>
+                Subscribe to Newselter : <input type="checkbox">
+            </label><br><br>
+            <label>
+                State : <select id="state" name="state">
+                <option>Select your state</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Madhya pradesh">Madhya pradesh</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Maharastra">Maharastra</option>
+                <option value="Jammu and kashmir">Jammu and kashmir</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Kerela">Kerela</option>
+                <option value="Sikkim">Sikkim</option>
+            </select>
+        </label><br><br>
+        <label> 
+            Upload Resume : <input type="file">
+    </label><br><br>
+    <label>
+        Adress : <textarea type="Address" value="Address" placeholder="Enter Your Full Address"></textarea>
+    </label><br><br>
+    <label>
+        Date Of Birth : <input type="date">
+    </label><br><br>
+    <label>
+        Prefered Interview Time : <input type="time">
+    </label><br><br>
+    <label>
+       Marks : <input type="text">
+    </label><br><br>
+    <label>
+         <input type="submit" value="submit" style="margin-left: 10%;">
+        <input type="reset" value="reset" style="margin-left: 5%;">
+    </label><br><br>
+           </table>
+        </div>
+
+        <div class="ojas">
+            <br>
+            <h2><u>More Information</u></h2><br><br>
+            <p>Explore Government job opportunities on the official OJAS website.</p><br><br>
+            <iframe src="https://ojas.gujarat.gov.in/"  style="height: 270px; width: 80%;"></iframe>
+        </div>
+
+        <div class="thanks">
+            <marquee direction="left" loop=""><div class="thankyou">THANK YOU !<br><br></div><div class="by"></marquee><marquee direction="right" loop="">~BY Dhaval Siddhapura</marquee>
+        </div>
+
+        <div class="footer">
+            <b><b><a href="homepagecss.html">&larr;Back to Home</a><br><br>
+                <p>Contact us at  <a href="http://www.incredibleindia.gov.in">info@incredibleindia.com</a></p><br>
+                <p>&#169 2025 Incredible India Project.All rights reserved.</p></b></b>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header{
+      background-image:  linear-gradient(to bottom right,#4a78a6,#dce1e7,#fffbfc,#1b2232);
+      height: 50px;
+      width: 99%;
+      border: 5px solid rgb(58, 15, 99);
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .header a{
+      color: black;
+      text-decoration: none;
+      position: relative;
+     transition: color 0.3s ease, padding-bottom 0.3s ease
+    }
+    
+.header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #131313;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header a:hover {
+  color: #101111;
+}
+
+.header a:hover::after {
+  width: 100%;
+  left: 0;
+}
+    .background{
+      height: 70vh;
+      width: 100%;
+      background-color: #1F1C2C;
+      border-radius: 30px 30px 0px 0px;
+      margin: auto;
+    }
+    .a{
+      margin: 13px;
+      font-weight: bolder;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+    .gradient1{
+      float: left;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      color: rgb(12, 12, 66);
+      background-image: linear-gradient(to bottom right,#C9D6FF,#E2E2E2);
+      height: 60vh;
+      width: 55%;
+      margin-top: 20px;
+      margin-left: 10px;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+    }
+    .slogan{
+      color: rgb(26, 55, 66);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .about{
+      border-radius: 10px;
+      margin: 9px;
+      box-shadow: 0 8px 12px 0 rgba(111, 184, 212, 0.925), 0 6px 20px 0 rgba(233, 157, 210, 0.897);
+      color:rgb(7, 62, 71);
+      font-family: Copperplate, Papyrus, fantasy;
+    }
+    .bgimage{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: right;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 59vh;
+      margin-top: 20px;
+      margin-right: 10px;
+      width: 40%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .image{
+      border-radius: 30px;
+      background-image: url("./hpimage.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .background2{
+      width: 100%;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      box-shadow:  0 6px 20px 0 rgba(4, 11, 105, 0.897);
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: xx-large;
+      text-align: center;
+      color: black;
+    }
+    .background3{
+      color: white;
+      background-color: #1F1C2C;
+      margin-right: 20px;
+      border-radius: 0px 0px 0px 0px;
+      height: 35vh;
+      width: 100%;
+     
+    }
+    .india{
+      text-align: center;
+      font-size: xx-large;
+    }
+    .architecture{
+      margin-left: 10px;
+    }
+    .slogan3{
+      width: 100%;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      box-shadow:  0 6px 20px 0 rgba(4, 11, 105, 0.897);
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: xx-large;
+      text-align: center;
+      color: black;
+    }
+    .bgimage2{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 50vh;
+      margin-top: 25px;
+      margin-left: 40px;
+      width: 80%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animation for background movement (parallax effect) */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+  .tajmahal{
+      border-radius: 30px;
+      background-image: url("./tajmahal1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .bgimage3{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 50vh;
+      margin-top: 25px;
+      margin-left: 40px;
+      width: 80%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animation for background movement (parallax effect) */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .qutubminar{
+      border-radius: 30px;
+      background-image: url("./qutubminar.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .footer{
+      float: left;
+      margin-top: 10px;
+      background-image: linear-gradient(to bottom right,#4a78a6,#dce1e7,#fffbfc,#1b2232);
+      height: 110px;
+      width: 99%;
+      border: 5px solid rgb(58, 15, 99);
+      text-align: center;
+    }
+    .background4{
+      border-radius: 30px 0px 30px 0px;
+      float: left;
+      height: 100vh;
+      width: 50%;
+      background-color: #1F1C2C;
+      margin: auto;
+    }
+    .background5{
+      border-radius: 0px 30px 0px 30px;
+      float: right;
+      height: 100vh;
+      width: 49.5%;
+      background-color: #1F1C2C;
+      margin: auto;
+    }
+    .slogan2{
+      box-shadow:  0 6px 20px 0 rgba(4, 11, 105, 0.897);
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      float: left;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      width: 100%;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    .background6{
+      float: left;
+      height: 110vh;
+      width: 100%;
+      background-color: #1F1C2C;
+      margin: auto;
+    }
+    .bgimage4{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      float: left;
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 50vh;
+      margin-top: 25px;
+      margin-left: 20px;
+      width: 40%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animation for background movement (parallax effect) */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .kathak{
+      border-radius: 30px;
+      background-image: url("./kathak.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .slogan4{
+      width: 100%;
+      box-shadow:  0 6px 20px 0 rgba(4, 11, 105, 0.897);
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      float: left;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 29px;
+      text-align: center;
+      color: black;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+    .background7{
+      float: left;
+      height: 40vh;
+      width: 100%;
+      background-color: #1F1C2C;
+      margin: auto;
+    }
+    .background8{
+      border-radius: 30px 0px 30px 0px;
+      float: left;
+      height: 100vh;
+      width: 50%;
+      background-color: #1F1C2C;
+      margin-top: 10px;
+    }
+    .background9{
+      border-radius: 0px 30px 0px 30px;
+      float: right;
+      height: 100vh;
+      width: 49.5%;
+      background-color: #1F1C2C;
+      margin-top: 10px;
+    }
+    .bgimage5{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 50vh;
+      margin-top: 40px;
+      margin-left: 50px;
+      width: 75%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animation for background movement (parallax effect) */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .bgimage6{
+      box-shadow: 1px 1px 1px white , 5px 5px 5px rgb(194, 194, 253);
+      color: rgb(12, 12, 66);
+      background-color: white;
+      height: 50vh;
+      margin-top: 40px;
+      margin-left: 50px;
+      width: 70%;
+      border: 7px double rgb(138, 116, 197);
+      border-radius: 30px;
+      animation: fadeIn 4s ease-out, moveBackground 20s linear infinite;
+    }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe animation for background movement (parallax effect) */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+    .biriyani{
+      border-radius: 30px;
+      background-image: url("./biriyani.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .food{
+      border-radius: 30px;
+      background-image: url("./food.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .background10{
+      font-size: larger;
+      font-family: monospace;
+      padding: 5px;
+      position: relative;
+      text-align: center;
+      color: white;
+      float: left;
+      height: 16vh;
+      width: 99.2%;
+      background-color: #1F1C2C;
+      border-radius: 0px 0px 30px 30px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+  .header {
+    height: 40px;
+    width: 99%;
+    margin-bottom: 5px;
+  }
+  
+  .background {
+    height: 125vh;
+    border-radius: 15px;
+  }
+
+  .gradient1 {
+    width: 94%;
+    margin-top: 15px;
+    margin-left: 17px;
+    margin-right: auto;
+    height: 66vh;
+    border: 5px double rgb(138, 116, 197);
+  }
+
+  .slogan, .slogan2, .slogan3, .slogan4 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .bgimage{
+    width: 49%;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: 193px;
+  } 
+  .bgimage2, .bgimage5, .bgimage6 {
+    width: 90%;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bgimage4{
+    width: 53%;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bgimage3{
+    width: 90%;
+    height: 76vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .bgimage img, .tajmahal img, .qutubminar img, .kathak img, .biriyani img, .food img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    height: 91px;
+    font-size: 14px;
+    padding: 5px;
+    width: 97%;
+  }
+
+  .background4 {
+    width: 100%;
+    height: auto;
+  }
+
+  .background6{
+    width: 100%;
+    height: 108vh;
+  }
+
+  .background5{
+    width: 100%;
+    height: 114vh;
+    margin-top: 10px;
+  }
+
+  .background7 {
+    width: 100%;
+    height: auto;
+  }
+
+  .background8{
+    border-radius: 30px 0px 30px 0px;
+    float: left;
+    height: 93vh;
+    width: 50%;
+    background-color: #1F1C2C;
+    margin-top: 10px;
+  }
+
+  .background9{
+    margin-left: 2px;
+    border-radius: 0px 30px 0px 30px;
+    float: left;
+    height: 93vh;
+    width: 49.5%;
+    background-color: #1F1C2C;
+    margin-top: 10px;
+  }
+
+  .background2{
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    font-size: x-large;
+  }
+   .background3 {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .image, .tajmahal, .qutubminar, .kathak, .biriyani, .food {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .india {
+    font-size: 22px;
+  }
+
+  .architecture {
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  .slogan2 {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="a">
+        <a href="homepagecss.html" > ~Home page || </a>
+        <a href="culturecss.html"  >Culture page || </a>
+        <a href="landmarkcss.html" >Landmarks page ||  </a>
+        <a href="cuisinecss.html">Cuisine page ||  </a>
+        <a href="contactcss.html">Contact Us~</a>
+        </div>
+    </div>
+    <div class="background">
+      <div class="gradient1">
+        <h1 style="text-shadow: 2px 2px 2px rgb(126, 219, 235),2px 2px 2px rgb(183, 141, 223);"><u>WELCOME TO INCREDIBLE INDIA !</u></h1>
+        <div class="slogan"><h3><b>Discover the diversity,beuty and rich heritage of india!</b></h3></div>
+        <div class="about"><h2><b>About India</b></h2>
+          <p><strong>India is a land of incredible diversity.From the snow-capped peaks of <em>Himalayas</em> to the serene backwards of kerela.every corner of India tells a unique story.India is a <strong><u>second-most populas country In the world</u></strong> and a boasts a history spanning thousands of years.Its rich tradisions have left an incredible mark on the world.</strong></p></div>
+      </div>
+      <div class="bgimage">
+        <div class="image"></div>
+      </div>
+    </div>
+    <div class="background2">
+      <q><b>Unity</b> in <b>diversity</b> is not just a slogan in <b>India</b> but a way of <b>life.</b></q>
+    </div>
+    <div class="background3">
+      <div class="architecture">
+        <p style="font-size:larger; margin-left: 10px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Highlights of India includes:</p>
+        <ul type="default" style="font-size:smaller; margin-left: 10px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+          <li><strong>Architecture:</strong>Majestic monuments like Tajmahal and Red fort</li>
+          <li><strong>Cuisine:</strong>Diverse flavores from spicy curries to sweet desert.</li>
+        <li><strong>Culture:</strong>Vibrent festivals,classical dances and colorful attire.</li>
+          <div class="famouslandmarks"><ul type="arrow"><h1>Famous Landmarks</h1>
+            <li>India is home to <mark><b>29 UNESCO World heritage site</b></mark>,making it a paradise for a history and architecture enthusiats.</li></ul>
+        </div>
+        </ul>
+        </div>
+        </div>
+        <div class="slogan3"><q><b>India</b> is a land of cultural and geographical diversity</q></div>
+        <div class="background4">
+        <div class="abouttajmahl" style="font-family: fantasy; color: white; font-size: 20px; text-align: center;">The Taj Mahal,a symbol of eternal love.</div>
+        <div class="bgimage2">
+          <div class="tajmahal"></div>
+        </div>
+        <div class="abouttajmahal" style="font-family: fantasy; color: white; font-size: 19px; text-align: center; margin-top: 20px;">The Taj Mahal was designated as a UNESCO World Heritage Site in 1983 for being “the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage”. It is regarded by many as the best example of Mughal architecture and a symbol of India's rich history.</div>
+       </div>
+       <div class="background5"> 
+        <div class="aboutqutubminar" style="font-family: fantasy; color: white; font-size: 19px; text-align: center;">The Qutub Minar,a symbol of architectural marvel in delhi.</div>
+         <div class="bgimage3">
+        <div class="qutubminar"></div>
+        <div class="aboutqutubminar" style="font-family: fantasy; color: white; font-size: 20px; text-align: center; margin-top: 20px;">Built of red and buff sandstone and eloquently carved with inscriptional bands, the Qutb Minar is the tallest masonry tower in India, measuring 72.5 metres high, with projecting balconies for calling all Muadhdhin to prayer. An iron pillar in the courtyard gave the mosque a unique Indian aesthetic.</div>
+          </div>
+        </div>
+       <div class="slogan2">
+        <p><i></i>Don't miss the exploring intricate carvings, towering minarets, and brethtaking landscapes!</i></p>
+       </div>
+       <div class="background6">
+        <h1 style="font-family: fantasy; color: white;  text-align: center;"><b><u>Indian Culture</u><b></b></h1>
+    <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;  text-align: center;">India's<strong> Culture Heritage</strong>is a blend of various tradisions,languages and religions.each region has it's unique identity and tradisions that are celebrated through festivals and daily life.</p>
+    <ul type="default"  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white; ">
+        <li><i>classical Dances:</i>Bharatnattyam,Kathak and odissi.</li>
+        <li><i>Music:</i>Tradisional instruments like sitar,veena and tabla.</li>
+        <li><i>Festivals:</i>Diwali,Holi,Eid and Cristmas brings people together in celebration.</li>
+     </ul>
+     <div class="bgimage4">
+     <div class="kathak"></div>
+     </div>
+     <div class="aboutkathak" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;  text-align: center; margin-top: 50px;">A glimpse of Indian classical dance.<br><br>The number of Indian classical dance styles ranges from six to eight to twelve, or more, depending on the source and scholar; the main organisation for Indian arts preservation, the Sangeet Natak Academy recognizes eight: Bharatanatyam, Kathak, Kuchipudi, Odissi, Kathakali, Sattriya, Manipuri and Mohiniyattam.<br><br>About Garba<br>Garba is a form of Gujarati dance which originates from the state of Gujarat, India. The name is derived from the Sanskrit term Garbha . Many traditional garbas are performed around a centrally lit lamp or a picture or statue of the Hindu goddess Durga.</div>
+       </div>
+       <div class="slogan4">“India is not a nation, nor a country. It is a subcontinent of nationalities.”</div>
+       <div class="background7">
+        <h1 style="font-family: fantasy; color: white;  text-align: center;"><b><u>Delisious Indian Cuisine</u></b></h1>
+        <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;  text-align: center;">Indian food is as diverse as its cukture.From the firey curries of south to the heartlu bread of the north,there is something for everyone.</p>
+        <ul type="default" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;">
+           <li><strong>Northindian:</strong>Butter chicken,naan and paneer tikka.</li>
+           <li><strong>Southindian:</strong>Dosa,idly and sambhar.</li>
+           <li><strong>Street food:</strong>Pani puri,chaat and vadapav.</li>
+       </ul>
+       </div>
+       <div class="div background8">
+        <div class="bgimage5">
+          <div class="biriyani"></div>
+          <div class="aboutbiriyani" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;  text-align: center; margin-top: 50px;">
+            <blockquote>Delisious Hydrabadi Biriyani</blockquote>
+            Vegetable Biryani is an aromatic rice dish made with basmati rice, mix veggies, herbs & biryani spices. This easy Veg Biryani is a total crowd pleaser! You will love this for everything from busy night meals to holiday family dinners.
+          </div>
+        </div>
+       </div>
+       <div class="div background9">
+        <div class="bgimage6">
+          <div class="food"></div>
+          <div class="aboutfood" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: white;  text-align:center ; margin-top: 40px;">
+            <blockquote>Colorful and flavorful Indian street food</blockquote>
+            Many types of Indian cuisine are made either from fish, meat, lentils, or vegetables. The specialty of Indian cuisine is its variety of spices that make each dish exotic, delicious, and stand out from the rest of the cuisines in the world
+          </div>
+        </div>
+       </div>
+       <div class="background10"><marquee direction="left" loop=""><div class="thankyou">THANK YOU !<br><br></div><div class="by"></marquee><marquee direction="right" loop="">~BY Dhaval Siddhapura</marquee></div></div>
+       <div class="footer"><b><p>contact us at<a href="http://www.incredibleindia.gov.in">info@incredibleindia.com</a></p>
+        <p>&#169 2025 Incredible India Project.All rights reserved.</p>
+        <p>Follow us on: <a href="http://www.facebook.com">Facebook</a> | <a href="http://www.twitter.com">Twitter</a></p></b>
+      </div>
+  </div>
+</body>
+</html>
